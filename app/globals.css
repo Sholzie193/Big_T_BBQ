@@ -57,12 +57,13 @@ body {
   border: 1px solid rgba(244, 233, 216, 0.35);
   color: var(--cream);
   font-family: var(--font-heading), sans-serif;
-  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-size: clamp(1.55rem, 7.2vw, 3.4rem);
   letter-spacing: 0.06em;
   line-height: 1;
   padding: 0.7rem 1.2rem;
   text-transform: uppercase;
   clip-path: polygon(0 12%, 4% 0, 98% 0, 100% 16%, 96% 100%, 2% 100%);
+  max-width: 100%;
 }
 
 .mobile-bar-link {
@@ -79,4 +80,15 @@ body {
 
 .mobile-bar-link:active {
   background: rgba(242, 106, 27, 0.22);
+}
+
+.mobile-bar {
+  padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
+}
+
+@media (max-width: 430px) {
+  .torn-title {
+    letter-spacing: 0.045em;
+    padding: 0.58rem 0.9rem;
+  }
 }

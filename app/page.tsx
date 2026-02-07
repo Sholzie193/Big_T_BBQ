@@ -108,14 +108,14 @@ export default function Home() {
   return (
     <main className="bg-charcoal text-cream">
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-charcoal/70 backdrop-blur-md">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-3 py-2 sm:px-4 sm:py-3 md:px-6">
           <a href="#top" className="flex items-center gap-2">
             <span className="rounded-lg border border-black/25 bg-cream/95 px-2 py-1 shadow-[0_4px_14px_rgba(0,0,0,0.35)]">
-              <Image src="/brand/logo.png" alt="Big T BBQ logo" width={112} height={46} className="h-8 w-auto object-contain md:h-9" />
+              <Image src="/brand/logo.png" alt="Big T BBQ logo" width={112} height={46} className="h-7 w-auto object-contain sm:h-8 md:h-9" />
             </span>
           </a>
 
-          <nav className="flex items-center gap-4 text-sm font-semibold uppercase tracking-wide md:gap-6">
+          <nav className="hidden items-center gap-4 text-xs font-semibold uppercase tracking-[0.08em] md:flex md:gap-5 lg:gap-6 lg:text-sm">
             <a href="#menu" className="hover:text-heat">Menu</a>
             <a href="#location" className="hover:text-heat">Location</a>
             <a href="#gallery" className="hover:text-heat">Gallery</a>
@@ -123,7 +123,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section id="top" className="relative isolate min-h-[92vh] overflow-hidden pt-20">
+      <section id="top" className="relative isolate min-h-[92vh] overflow-hidden pt-16 sm:pt-20">
         <Image
           src="/food/hero.png"
           alt="Smoked brisket hero shot"
@@ -135,7 +135,7 @@ export default function Home() {
         <div className="absolute inset-y-0 left-0 w-full bg-gradient-to-r from-black/65 via-black/15 to-transparent md:w-4/5" />
         <div className="smoke-haze absolute inset-0" />
 
-        <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-4 pb-20 pt-10 md:px-6 md:pt-20">
+        <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-4 pb-20 pt-8 md:px-6 md:pt-20">
           <div className="w-fit -rotate-2 border border-charcoal/60 bg-heat px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-charcoal shadow-tape">
             Weekend Only
           </div>
@@ -144,17 +144,17 @@ export default function Home() {
             <div className="inline-flex w-fit rounded-xl border border-black/20 bg-cream/92 px-3 py-2 shadow-[0_8px_22px_rgba(0,0,0,0.45)]">
               <Image src="/brand/logo.png" alt="Big T BBQ" width={495} height={205} className="h-12 w-auto object-contain md:h-14" />
             </div>
-            <p className="font-heading text-6xl uppercase leading-[0.9] tracking-wide drop-shadow-[0_4px_14px_rgba(0,0,0,0.68)] md:text-8xl">
+            <p className="font-heading text-[clamp(2.35rem,13vw,4.4rem)] uppercase leading-[0.9] tracking-wide drop-shadow-[0_4px_14px_rgba(0,0,0,0.68)] md:text-8xl">
               Texas BBQ. Al Quoz.
             </p>
             <p className="max-w-xl text-base text-cream/90 drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)] md:text-lg">
               100% wood-smoked. From scratch. Weekend drops.
             </p>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
                 href="#menu-preview"
-                className="rounded-full bg-heat px-6 py-3 text-sm font-bold uppercase tracking-wide text-charcoal transition hover:bg-cream"
+                className="w-full rounded-full bg-heat px-6 py-3 text-center text-sm font-bold uppercase tracking-wide text-charcoal transition hover:bg-cream sm:w-auto"
               >
                 View Menu
               </a>
@@ -162,7 +162,7 @@ export default function Home() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full border border-cream/50 bg-black/30 px-6 py-3 text-sm font-semibold uppercase tracking-wide transition hover:border-heat hover:text-heat"
+                className="w-full rounded-full border border-cream/50 bg-black/30 px-6 py-3 text-center text-sm font-semibold uppercase tracking-wide transition hover:border-heat hover:text-heat sm:w-auto"
               >
                 Order on WhatsApp
               </a>
@@ -207,7 +207,7 @@ export default function Home() {
       <section className="section-shell">
         <div className="grid gap-6 rounded-3xl border border-white/10 bg-wood/50 p-6 md:grid-cols-2 md:p-10">
           <div>
-            <h2 className="font-heading text-5xl uppercase leading-[0.92] tracking-wide">Why Big T</h2>
+            <h2 className="font-heading text-4xl uppercase leading-[0.92] tracking-wide sm:text-5xl">Why Big T</h2>
             <p className="mt-3 max-w-md text-cream/85">
               Small-batch Texas BBQ made for weekend cravings. Smoke, bark, and bold flavor without shortcuts.
             </p>
@@ -231,7 +231,7 @@ export default function Home() {
       <section id="location" className="section-shell">
         <div className="grid gap-6 lg:grid-cols-[1fr_1.2fr]">
           <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
-            <h2 className="font-heading text-5xl uppercase tracking-wide">Hours + Location</h2>
+            <h2 className="font-heading text-4xl uppercase tracking-wide sm:text-5xl">Hours + Location</h2>
             <p className="mt-4 text-lg font-semibold text-heat">Fri/Sat/Sun 12-10 PM</p>
             <p className="mt-2 text-cream/85">Al Quoz Industrial Area 4, Dubai</p>
             <div className="mt-6 flex flex-wrap gap-3">
@@ -256,7 +256,7 @@ export default function Home() {
             <iframe
               title="Big T BBQ location map"
               src="https://maps.google.com/maps?q=Al%20Quoz%20Industrial%20Area%204%2C%20Dubai&output=embed"
-              className="h-[340px] w-full md:h-full"
+              className="h-[340px] w-full sm:h-[400px] lg:h-full"
               loading="lazy"
             />
           </div>
@@ -286,11 +286,11 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-white/10 bg-black/40 px-4 py-8">
+      <footer className="border-t border-white/10 bg-black/40 px-4 pb-24 pt-8 md:pb-8">
         <div className="mx-auto grid max-w-6xl gap-4 text-sm text-cream/80 md:grid-cols-3 md:px-2">
           <p>Big T BBQ</p>
           <p>Al Quoz Industrial Area 4, Dubai</p>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-4">
             <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-heat">
               Instagram
             </a>
@@ -302,7 +302,7 @@ export default function Home() {
         </div>
       </footer>
 
-      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-charcoal/95 px-2 py-2 backdrop-blur md:hidden">
+      <div className="mobile-bar fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-charcoal/95 px-2 py-2 backdrop-blur md:hidden">
         <div className="grid grid-cols-4 gap-2 text-[11px] font-semibold uppercase tracking-wide text-cream">
           <a href={callUrl} className="mobile-bar-link">
             <PhoneIcon />
