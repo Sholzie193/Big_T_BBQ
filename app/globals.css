@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --charcoal: #0f1115;
+  --wood: #3a2416;
+  --smoke: #a7a7a7;
+  --cream: #f4e9d8;
+  --heat: #f26a1b;
+  --ember: #c1121f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(1200px 500px at 20% -10%, rgba(242, 106, 27, 0.16), transparent 60%),
+    radial-gradient(900px 420px at 90% 8%, rgba(193, 18, 31, 0.12), transparent 62%),
+    var(--charcoal);
+  color: var(--cream);
+  font-family: var(--font-body), sans-serif;
+}
+
+.font-heading {
+  font-family: var(--font-heading), sans-serif;
+}
+
+.section-shell {
+  margin-inline: auto;
+  max-width: 72rem;
+  padding-inline: 1rem;
+  padding-top: 3.6rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .section-shell {
+    padding-inline: 1.5rem;
+    padding-top: 5rem;
+  }
+}
+
+.smoke-haze {
+  background-image:
+    radial-gradient(circle at 12% 22%, rgba(255, 255, 255, 0.13), transparent 38%),
+    radial-gradient(circle at 78% 10%, rgba(255, 255, 255, 0.1), transparent 36%),
+    radial-gradient(circle at 32% 84%, rgba(255, 255, 255, 0.08), transparent 35%);
+  mix-blend-mode: screen;
+}
+
+.torn-title {
+  display: inline-block;
+  background: linear-gradient(125deg, rgba(242, 106, 27, 0.2), rgba(244, 233, 216, 0.16));
+  border: 1px solid rgba(244, 233, 216, 0.35);
+  color: var(--cream);
+  font-family: var(--font-heading), sans-serif;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  letter-spacing: 0.06em;
+  line-height: 1;
+  padding: 0.7rem 1.2rem;
+  text-transform: uppercase;
+  clip-path: polygon(0 12%, 4% 0, 98% 0, 100% 16%, 96% 100%, 2% 100%);
+}
+
+.mobile-bar-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  border: 1px solid rgba(244, 233, 216, 0.15);
+  border-radius: 0.7rem;
+  min-height: 3.1rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.mobile-bar-link:active {
+  background: rgba(242, 106, 27, 0.22);
+}
