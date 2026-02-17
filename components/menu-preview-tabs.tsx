@@ -36,7 +36,7 @@ export default function MenuPreviewTabs() {
 
   return (
     <div className="rounded-2xl border border-white/10 bg-charcoal/70 p-4 shadow-ember md:p-6">
-      <div className="mb-4 flex rounded-xl border border-white/10 bg-black/30 p-1">
+      <div className="mb-4 grid grid-cols-3 rounded-xl border border-white/10 bg-black/30 p-1">
         {labels.map((label) => (
           <button
             key={label.key}
@@ -57,10 +57,10 @@ export default function MenuPreviewTabs() {
         {tabData[activeTab].map((item) => (
           <li
             key={item.name}
-            className="flex items-center justify-between rounded-lg border border-white/10 bg-black/25 px-4 py-3"
+            className="flex items-center justify-between gap-3 rounded-lg border border-white/10 bg-black/25 px-4 py-3"
           >
             <span className="text-sm font-medium text-cream md:text-base">{item.name}</span>
-            <span className="text-sm font-semibold text-heat md:text-base">{item.price}</span>
+            <span className="whitespace-nowrap text-sm font-semibold text-heat md:text-base">{item.price}</span>
           </li>
         ))}
       </ul>

@@ -106,7 +106,7 @@ function MenuIcon() {
 
 export default function Home() {
   return (
-    <main className="bg-charcoal text-cream">
+    <main className="overflow-x-hidden bg-charcoal text-cream">
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-charcoal/70 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-3 py-2 sm:px-4 sm:py-3 md:px-6">
           <a href="#top" className="flex items-center gap-2">
@@ -123,7 +123,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section id="top" className="relative isolate min-h-[92vh] overflow-hidden pt-16 sm:pt-20">
+      <section id="top" className="relative isolate min-h-[92svh] overflow-hidden pt-16 sm:min-h-[92vh] sm:pt-20">
         <Image
           src="/food/hero.png"
           alt="Smoked brisket hero shot"
@@ -135,7 +135,7 @@ export default function Home() {
         <div className="absolute inset-y-0 left-0 w-full bg-gradient-to-r from-black/65 via-black/15 to-transparent md:w-4/5" />
         <div className="smoke-haze absolute inset-0" />
 
-        <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-4 pb-20 pt-8 md:px-6 md:pt-20">
+        <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-4 pb-20 pt-10 sm:pt-12 md:px-6 md:pt-20">
           <div className="w-fit -rotate-2 border border-charcoal/60 bg-heat px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-charcoal shadow-tape">
             Weekend Only
           </div>
@@ -144,7 +144,7 @@ export default function Home() {
             <div className="inline-flex w-fit rounded-xl border border-black/20 bg-cream/92 px-3 py-2 shadow-[0_8px_22px_rgba(0,0,0,0.45)]">
               <Image src="/brand/logo.png" alt="Big T BBQ" width={495} height={205} className="h-12 w-auto object-contain md:h-14" />
             </div>
-            <p className="font-heading text-[clamp(2.35rem,13vw,4.4rem)] uppercase leading-[0.9] tracking-wide drop-shadow-[0_4px_14px_rgba(0,0,0,0.68)] md:text-8xl">
+            <p className="font-heading text-[clamp(2.2rem,12.5vw,4.4rem)] uppercase leading-[0.9] tracking-[0.03em] drop-shadow-[0_4px_14px_rgba(0,0,0,0.68)] sm:tracking-wide md:text-8xl">
               Texas BBQ. Al Quoz.
             </p>
             <p className="max-w-xl text-base text-cream/90 drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)] md:text-lg">
@@ -188,7 +188,7 @@ export default function Home() {
                 <Image src={plate.image} alt={plate.title} fill className="object-cover transition duration-500 group-hover:scale-105" />
               </div>
               <div className="space-y-3 p-4">
-                <h3 className="font-heading text-3xl uppercase tracking-wide">{plate.title}</h3>
+                <h3 className="font-heading text-2xl uppercase tracking-wide sm:text-3xl">{plate.title}</h3>
                 <p className="text-sm text-cream/80">{plate.description}</p>
                 <a
                   href={whatsappUrl}
@@ -230,22 +230,22 @@ export default function Home() {
 
       <section id="location" className="section-shell">
         <div className="grid gap-6 lg:grid-cols-[1fr_1.2fr]">
-          <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
+          <div className="rounded-2xl border border-white/10 bg-black/30 p-5 sm:p-6">
             <h2 className="font-heading text-4xl uppercase tracking-wide sm:text-5xl">Hours + Location</h2>
             <p className="mt-4 text-lg font-semibold text-heat">Fri/Sat/Sun 12-10 PM</p>
             <p className="mt-2 text-cream/85">Al Quoz Industrial Area 4, Dubai</p>
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
                 href={mapsUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full bg-heat px-5 py-3 text-sm font-bold uppercase tracking-wide text-charcoal transition hover:bg-cream"
+                className="w-full rounded-full bg-heat px-5 py-3 text-center text-sm font-bold uppercase tracking-wide text-charcoal transition hover:bg-cream sm:w-auto"
               >
                 Get Directions
               </a>
               <a
                 href={callUrl}
-                className="rounded-full border border-cream/40 px-5 py-3 text-sm font-semibold uppercase tracking-wide transition hover:border-heat hover:text-heat"
+                className="w-full rounded-full border border-cream/40 px-5 py-3 text-center text-sm font-semibold uppercase tracking-wide transition hover:border-heat hover:text-heat sm:w-auto"
               >
                 Call Now
               </a>
@@ -256,7 +256,7 @@ export default function Home() {
             <iframe
               title="Big T BBQ location map"
               src="https://maps.google.com/maps?q=Al%20Quoz%20Industrial%20Area%204%2C%20Dubai&output=embed"
-              className="h-[340px] w-full sm:h-[400px] lg:h-full"
+              className="h-[300px] w-full sm:h-[400px] lg:h-full"
               loading="lazy"
             />
           </div>
@@ -265,7 +265,7 @@ export default function Home() {
 
       <section id="gallery" className="section-shell">
         <div className="torn-title">Gallery</div>
-        <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-4">
+        <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
           {galleryImages.map((src, index) => (
             <div key={`${src}-${index}`} className="relative aspect-square overflow-hidden rounded-xl border border-white/10">
               <Image src={src} alt={`Gallery item ${index + 1}`} fill className="object-cover transition duration-500 hover:scale-105" />
@@ -287,10 +287,10 @@ export default function Home() {
       </section>
 
       <footer className="border-t border-white/10 bg-black/40 px-4 pb-24 pt-8 md:pb-8">
-        <div className="mx-auto grid max-w-6xl gap-4 text-sm text-cream/80 md:grid-cols-3 md:px-2">
-          <p>Big T BBQ</p>
+        <div className="mx-auto grid max-w-6xl gap-4 text-center text-sm text-cream/80 sm:text-left md:grid-cols-3 md:px-2">
+          <p className="font-semibold">Big T BBQ</p>
           <p>Al Quoz Industrial Area 4, Dubai</p>
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:justify-start">
             <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-heat">
               Instagram
             </a>
